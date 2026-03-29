@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Warehouse13 — The unified Infinity master site. Every project, every signal, one portal." />
+  <title>Warehouse13 | Infinity Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
+  <header class="site-header" role="banner">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="#hero" aria-label="Warehouse13 Home">
+        <span class="brand-icon" aria-hidden="true">⬡</span>
+        <span class="brand-name">Warehouse<span class="brand-accent">13</span></span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav-links" role="list" id="nav-links-desktop">
+        <li><a href="#tools"   class="nav-link">Tools</a></li>
+        <li><a href="#games"   class="nav-link">Games</a></li>
+        <li><a href="#media"   class="nav-link">Media</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#social"  class="nav-link">Social</a></li>
+        <li>
+          <a href="https://github.com/www-infinity4" target="_blank" rel="noopener noreferrer"
+             class="nav-link nav-link--cta" aria-label="Open GitHub profile in new tab">
+            GitHub ↗
+          </a>
+        </li>
+      </ul>
+
+      <!-- Hamburger button -->
+      <button class="hamburger" id="hamburger-btn" aria-controls="mobile-menu"
+              aria-expanded="false" aria-label="Open navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+
+    <!-- ─── Mobile slide-out menu ─── -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true"
+         aria-label="Mobile navigation" aria-hidden="true">
+      <button class="mobile-menu__close" id="mobile-close-btn" aria-label="Close navigation menu">✕</button>
+      <ul class="mobile-menu__links" role="list">
+
+        <li class="mobile-menu__section-label">— Tools —</li>
+        <li><a href="https://github.com/www-infinity4/Gitpub"     target="_blank" rel="noopener noreferrer" class="mobile-link">Gitpub</a></li>
+        <li><a href="https://github.com/www-infinity4/Gitpal"     target="_blank" rel="noopener noreferrer" class="mobile-link">Gitpal</a></li>
+        <li><a href="https://github.com/www-infinity4/Gitpal-"    target="_blank" rel="noopener noreferrer" class="mobile-link">Gitpal+</a></li>
+        <li><a href="https://github.com/www-infinity4/Gitpro"     target="_blank" rel="noopener noreferrer" class="mobile-link">Gitpro</a></li>
+        <li><a href="https://github.com/www-infinity4/Gitmap"     target="_blank" rel="noopener noreferrer" class="mobile-link">Gitmap</a></li>
+        <li><a href="https://github.com/www-infinity4/Gitpin"     target="_blank" rel="noopener noreferrer" class="mobile-link">Gitpin</a></li>
+        <li><a href="https://github.com/www-infinity4/Gitflow"    target="_blank" rel="noopener noreferrer" class="mobile-link">Gitflow</a></li>
+        <li><a href="https://github.com/www-infinity4/Gitcoin"    target="_blank" rel="noopener noreferrer" class="mobile-link">Gitcoin</a></li>
+        <li><a href="https://github.com/www-infinity4/Gitdad"     target="_blank" rel="noopener noreferrer" class="mobile-link">Gitdad</a></li>
+        <li><a href="https://github.com/www-infinity4/git"        target="_blank" rel="noopener noreferrer" class="mobile-link">Git (Core)</a></li>
+        <li><a href="https://github.com/www-infinity4/Clone-of-Gitpal" target="_blank" rel="noopener noreferrer" class="mobile-link">Clone-of-Gitpal</a></li>
+        <li><a href="https://github.com/www-infinity4/Git-Stream"  target="_blank" rel="noopener noreferrer" class="mobile-link">Git-Stream</a></li>
+
+        <li class="mobile-menu__section-label">— Games —</li>
+        <li><a href="https://github.com/www-infinity4/ESCAPE-FROM-NEW-YORK"         target="_blank" rel="noopener noreferrer" class="mobile-link">Escape From New York</a></li>
+        <li><a href="https://github.com/www-infinity4/Escape-From-LA-Game"          target="_blank" rel="noopener noreferrer" class="mobile-link">Escape From LA</a></li>
+        <li><a href="https://github.com/www-infinity4/Pirates-Of-Silicon-Valley-Game" target="_blank" rel="noopener noreferrer" class="mobile-link">Pirates of Silicon Valley</a></li>
+        <li><a href="https://github.com/www-infinity4/Emulation-Station"            target="_blank" rel="noopener noreferrer" class="mobile-link">Emulation Station</a></li>
+
+        <li class="mobile-menu__section-label">— Media —</li>
+        <li><a href="https://github.com/www-infinity4/Alien-Radio"    target="_blank" rel="noopener noreferrer" class="mobile-link">Alien Radio</a></li>
+        <li><a href="https://github.com/www-infinity4/Shortwave"      target="_blank" rel="noopener noreferrer" class="mobile-link">Shortwave</a></li>
+        <li><a href="https://github.com/www-infinity4/Camera-app"     target="_blank" rel="noopener noreferrer" class="mobile-link">Camera App</a></li>
+
+        <li class="mobile-menu__section-label">— Research —</li>
+        <li><a href="https://github.com/www-infinity4/Thermite-Earth-Core" target="_blank" rel="noopener noreferrer" class="mobile-link">Thermite Earth Core</a></li>
+        <li><a href="https://github.com/www-infinity4/Fission"             target="_blank" rel="noopener noreferrer" class="mobile-link">Fission</a></li>
+        <li><a href="https://github.com/www-infinity4/Unthinkable"         target="_blank" rel="noopener noreferrer" class="mobile-link">Unthinkable</a></li>
+        <li><a href="https://github.com/www-infinity4/Giro"                target="_blank" rel="noopener noreferrer" class="mobile-link">Giro</a></li>
+
+        <li class="mobile-menu__section-label">— Social —</li>
+        <li><a href="https://github.com/www-infinity4/Suleman"  target="_blank" rel="noopener noreferrer" class="mobile-link">Suleman</a></li>
+
+        <li class="mobile-menu__divider"></li>
+        <li>
+          <a href="https://github.com/www-infinity4" target="_blank" rel="noopener noreferrer"
+             class="mobile-link mobile-link--cta">
+            ↗ All Repositories
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════ HERO ═══════════════════ -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">www-infinity4 ∞ Master Portal</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__title-line">Warehouse</span>
+          <span class="hero__title-num">13</span>
+        </h1>
+        <p class="hero__subtitle">
+          Every repo. Every signal. One unified portal.<br />
+          25 projects — tools, games, media, research &amp; social — wired together.
+        </p>
+        <div class="hero__actions">
+          <a href="#tools" class="btn btn--primary">Explore Projects</a>
+          <a href="https://github.com/www-infinity4" target="_blank" rel="noopener noreferrer"
+             class="btn btn--outline">GitHub Profile ↗</a>
+        </div>
+        <div class="hero__stats" role="list" aria-label="Portfolio statistics">
+          <div class="stat" role="listitem">
+            <span class="stat__num" id="stat-repos">25</span>
+            <span class="stat__label">Repositories</span>
+          </div>
+          <div class="stat" role="listitem">
+            <span class="stat__num">5</span>
+            <span class="stat__label">Categories</span>
+          </div>
+          <div class="stat" role="listitem">
+            <span class="stat__num">∞</span>
+            <span class="stat__label">Potential</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__orb" aria-hidden="true"></div>
+    </section>
+
+    <!-- ═══════════════════ TOOLS ═══════════════════ -->
+    <section id="tools" class="section" aria-labelledby="tools-title">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__tag">Category 01</span>
+          <h2 class="section__title" id="tools-title">Git Tools &amp; Platform</h2>
+          <p class="section__desc">
+            A full ecosystem of GitHub-native utilities — publish, map, pin, stream, pay and flow.
+          </p>
+        </div>
+        <div class="cards-grid">
+
+          <article class="card" aria-label="Gitpub project">
+            <div class="card__icon" aria-hidden="true">📦</div>
+            <h3 class="card__title">Gitpub</h3>
+            <p class="card__desc">Publishes repositories, grows them with a website builder and environment tools for every nook of a site.</p>
+            <div class="card__tags"><span class="tag">JavaScript</span><span class="tag">Website Builder</span></div>
+            <a href="https://github.com/www-infinity4/Gitpub" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Gitpub on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Gitpal project">
+            <div class="card__icon" aria-hidden="true">🤝</div>
+            <h3 class="card__title">Gitpal</h3>
+            <p class="card__desc">Your GitHub companion — collaborative tools for building and managing projects side-by-side.</p>
+            <div class="card__tags"><span class="tag">JavaScript</span><span class="tag">Collaboration</span></div>
+            <a href="https://github.com/www-infinity4/Gitpal" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Gitpal on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Gitpro project">
+            <div class="card__icon" aria-hidden="true">⚡</div>
+            <h3 class="card__title">Gitpro</h3>
+            <p class="card__desc">Professional-grade GitHub tooling built in TypeScript. Strict types, production-ready workflows.</p>
+            <div class="card__tags"><span class="tag">TypeScript</span><span class="tag">Pro Tools</span></div>
+            <a href="https://github.com/www-infinity4/Gitpro" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Gitpro on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Gitmap project">
+            <div class="card__icon" aria-hidden="true">🗺️</div>
+            <h3 class="card__title">Gitmap</h3>
+            <p class="card__desc">Infinity Grade tiered mapping: Platinum, Gold, Silver, Copper, Diamond, Sapphire, Topaz &amp; Quartz for scripts, tools and AI. Search and deploy on map.</p>
+            <div class="card__tags"><span class="tag">JavaScript</span><span class="tag">Map</span><span class="tag">AI</span></div>
+            <a href="https://github.com/www-infinity4/Gitmap" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Gitmap on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Gitpin project">
+            <div class="card__icon" aria-hidden="true">📌</div>
+            <h3 class="card__title">Gitpin</h3>
+            <p class="card__desc">Pinterest for GitHub. Pin content you enjoy — saves a list for Gitpal/Gitpro to weave into your own projects with quantum mechanic precision.</p>
+            <div class="card__tags"><span class="tag">JavaScript</span><span class="tag">Social</span></div>
+            <a href="https://github.com/www-infinity4/Gitpin" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Gitpin on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Gitflow project">
+            <div class="card__icon" aria-hidden="true">🔀</div>
+            <h3 class="card__title">Gitflow</h3>
+            <p class="card__desc">Workflow management for GitHub. Streamline branching, merging and deployment pipelines.</p>
+            <div class="card__tags"><span class="tag">HTML</span><span class="tag">Workflow</span></div>
+            <a href="https://github.com/www-infinity4/Gitflow" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Gitflow on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Gitcoin project">
+            <div class="card__icon" aria-hidden="true">🪙</div>
+            <h3 class="card__title">Gitcoin</h3>
+            <p class="card__desc">Pays users in Gits for building research tokens that attach to a scannable signal — unique like QED QR Code but emits through nano radiation signals.</p>
+            <div class="card__tags"><span class="tag">JavaScript</span><span class="tag">Crypto</span><span class="tag">Tokens</span></div>
+            <a href="https://github.com/www-infinity4/Gitcoin" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Gitcoin on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Git-Stream project">
+            <div class="card__icon" aria-hidden="true">📡</div>
+            <h3 class="card__title">Git-Stream</h3>
+            <p class="card__desc">Streaming content from any GitHub presets RSS feed — AI, operating systems, games and more, live.</p>
+            <div class="card__tags"><span class="tag">Streaming</span><span class="tag">RSS</span></div>
+            <a href="https://github.com/www-infinity4/Git-Stream" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Git-Stream on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Gitdad project">
+            <div class="card__icon" aria-hidden="true">🤖</div>
+            <h3 class="card__title">Gitdad</h3>
+            <p class="card__desc">A robot honing signal — in case you've lost your dad. Locator, signal tracker and connection tool.</p>
+            <div class="card__tags"><span class="tag">JavaScript</span><span class="tag">Bot</span></div>
+            <a href="https://github.com/www-infinity4/Gitdad" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Gitdad on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Clone-of-Gitpal project">
+            <div class="card__icon" aria-hidden="true">🔧</div>
+            <h3 class="card__title">Clone-of-Gitpal</h3>
+            <p class="card__desc">A cloned fork of Gitpal under active repair and feature extension.</p>
+            <div class="card__tags"><span class="tag">HTML</span><span class="tag">Fork</span></div>
+            <a href="https://github.com/www-infinity4/Clone-of-Gitpal" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Clone-of-Gitpal on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="git core project">
+            <div class="card__icon" aria-hidden="true">🐚</div>
+            <h3 class="card__title">Git (Core)</h3>
+            <p class="card__desc">Core shell scripts powering the Infinity git automation ecosystem. The backbone.</p>
+            <div class="card__tags"><span class="tag">Shell</span><span class="tag">Core</span></div>
+            <a href="https://github.com/www-infinity4/git" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Git core on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Gitpal+ project">
+            <div class="card__icon" aria-hidden="true">✨</div>
+            <h3 class="card__title">Gitpal+</h3>
+            <p class="card__desc">An extended version of Gitpal with additional feature layers and experimental integrations.</p>
+            <div class="card__tags"><span class="tag">JavaScript</span><span class="tag">Extended</span></div>
+            <a href="https://github.com/www-infinity4/Gitpal-" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Gitpal+ on GitHub">View Repo ↗</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ GAMES ═══════════════════ -->
+    <section id="games" class="section section--alt" aria-labelledby="games-title">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__tag">Category 02</span>
+          <h2 class="section__title" id="games-title">Games &amp; Emulation</h2>
+          <p class="section__desc">
+            Interactive browser games and a full emulation station — from Snake to 1984 Apple hardware design.
+          </p>
+        </div>
+        <div class="cards-grid">
+
+          <article class="card card--featured" aria-label="Escape From New York game">
+            <div class="card__icon" aria-hidden="true">🗽</div>
+            <h3 class="card__title">Escape From New York</h3>
+            <p class="card__desc">Play as Snake Plissken. 10 rounds × 10 questions. Classic Snake gameplay meets escape-room puzzle mechanics in post-apocalyptic NYC.</p>
+            <div class="card__tags"><span class="tag">JavaScript</span><span class="tag">Game</span><span class="tag">Snake</span></div>
+            <a href="https://github.com/www-infinity4/ESCAPE-FROM-NEW-YORK" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Escape From New York on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Escape From LA game">
+            <div class="card__icon" aria-hidden="true">🌴</div>
+            <h3 class="card__title">Escape From LA</h3>
+            <p class="card__desc">Sequel gameplay — escape the City of Angels. New puzzles, new terrain, same Snake energy.</p>
+            <div class="card__tags"><span class="tag">JavaScript</span><span class="tag">Game</span></div>
+            <a href="https://github.com/www-infinity4/Escape-From-LA-Game" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Escape From LA on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card card--featured" aria-label="Pirates of Silicon Valley game">
+            <div class="card__icon" aria-hidden="true">🍎</div>
+            <h3 class="card__title">Pirates of Silicon Valley</h3>
+            <p class="card__desc">You play Steve Jobs, 1984. 10 levels — build Apple hardware &amp; software year by year, from capacitors to the 2026 iPhone design in level 10.</p>
+            <div class="card__tags"><span class="tag">Game</span><span class="tag">History</span><span class="tag">Tech</span></div>
+            <a href="https://github.com/www-infinity4/Pirates-Of-Silicon-Valley-Game" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Pirates of Silicon Valley on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Emulation Station project">
+            <div class="card__icon" aria-hidden="true">🕹️</div>
+            <h3 class="card__title">Emulation Station</h3>
+            <p class="card__desc">A full emulation station — run classic systems in the browser. Retro gaming, reimagined for the web.</p>
+            <div class="card__tags"><span class="tag">HTML</span><span class="tag">Emulation</span><span class="tag">Retro</span></div>
+            <a href="https://github.com/www-infinity4/Emulation-Station" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Emulation Station on GitHub">View Repo ↗</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ MEDIA ═══════════════════ -->
+    <section id="media" class="section" aria-labelledby="media-title">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__tag">Category 03</span>
+          <h2 class="section__title" id="media-title">Media &amp; Signal</h2>
+          <p class="section__desc">
+            Alien frequencies, shortwave receivers, and next-generation camera technology.
+          </p>
+        </div>
+        <div class="cards-grid">
+
+          <article class="card card--featured" aria-label="Alien Radio project">
+            <div class="card__icon" aria-hidden="true">👽</div>
+            <h3 class="card__title">Alien Radio</h3>
+            <p class="card__desc">Alien sounds digital radio — capturing frequencies beyond the conventional spectrum. The signal is always on.</p>
+            <div class="card__tags"><span class="tag">JavaScript</span><span class="tag">Radio</span><span class="tag">Audio</span></div>
+            <a href="https://github.com/www-infinity4/Alien-Radio" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Alien Radio on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Shortwave radio project">
+            <div class="card__icon" aria-hidden="true">📻</div>
+            <h3 class="card__title">Shortwave</h3>
+            <p class="card__desc">Shortwave Digital — Grundig-style all-wave radio receiver in the browser. AM, FM, SW and beyond.</p>
+            <div class="card__tags"><span class="tag">Radio</span><span class="tag">Digital</span></div>
+            <a href="https://github.com/www-infinity4/Shortwave" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Shortwave on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Camera App project">
+            <div class="card__icon" aria-hidden="true">📷</div>
+            <h3 class="card__title">Camera App</h3>
+            <p class="card__desc">Night vision, radiation detection and infrared capture — a multi-spectrum camera application for advanced visual analysis.</p>
+            <div class="card__tags"><span class="tag">JavaScript</span><span class="tag">Vision</span><span class="tag">Infrared</span></div>
+            <a href="https://github.com/www-infinity4/Camera-app" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Camera App on GitHub">View Repo ↗</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ RESEARCH ═══════════════════ -->
+    <section id="research" class="section section--alt" aria-labelledby="research-title">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__tag">Category 04</span>
+          <h2 class="section__title" id="research-title">Research &amp; Science</h2>
+          <p class="section__desc">
+            Pushing past conventional boundaries — thermite, fission, biological regulation and beyond human conception.
+          </p>
+        </div>
+        <div class="cards-grid">
+
+          <article class="card card--featured" aria-label="Thermite Earth Core project">
+            <div class="card__icon" aria-hidden="true">🔥</div>
+            <h3 class="card__title">Thermite Earth Core</h3>
+            <p class="card__desc">Research into thermite at nano and micro scale — from conventional welding compounds to metastable intermolecular composites (MICs).</p>
+            <div class="card__tags"><span class="tag">HTML</span><span class="tag">Chemistry</span><span class="tag">Nano</span></div>
+            <a href="https://github.com/www-infinity4/Thermite-Earth-Core" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Thermite Earth Core on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Fission project">
+            <div class="card__icon" aria-hidden="true">⚛️</div>
+            <h3 class="card__title">Fission</h3>
+            <p class="card__desc">Digital fission research agents — specialized AI agents each mastering one domain: equations, arithmetic, dictionary, poetry and more.</p>
+            <div class="card__tags"><span class="tag">Research</span><span class="tag">AI Agents</span></div>
+            <a href="https://github.com/www-infinity4/Fission" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Fission on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Unthinkable project">
+            <div class="card__icon" aria-hidden="true">🌌</div>
+            <h3 class="card__title">Unthinkable</h3>
+            <p class="card__desc">Beyond human conception — computation that reaches into territory labelled sci-fi by those who haven't caught up yet.</p>
+            <div class="card__tags"><span class="tag">JavaScript</span><span class="tag">Sci-Fi</span><span class="tag">AI</span></div>
+            <a href="https://github.com/www-infinity4/Unthinkable" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Unthinkable on GitHub">View Repo ↗</a>
+          </article>
+
+          <article class="card" aria-label="Giro project">
+            <div class="card__icon" aria-hidden="true">🌀</div>
+            <h3 class="card__title">Giro</h3>
+            <p class="card__desc">An operational symptomatic regulator of specially sourced erythema in a corresponding pool of inertia forces — biological resonance research.</p>
+            <div class="card__tags"><span class="tag">HTML</span><span class="tag">Bio-Signal</span></div>
+            <a href="https://github.com/www-infinity4/Giro" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Giro on GitHub">View Repo ↗</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ SOCIAL ═══════════════════ -->
+    <section id="social" class="section" aria-labelledby="social-title">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__tag">Category 05</span>
+          <h2 class="section__title" id="social-title">Social &amp; Community</h2>
+          <p class="section__desc">
+            Connecting people, building networks, enabling conversation and community.
+          </p>
+        </div>
+        <div class="cards-grid">
+
+          <article class="card card--featured" aria-label="Suleman project">
+            <div class="card__icon" aria-hidden="true">👥</div>
+            <h3 class="card__title">Suleman</h3>
+            <p class="card__desc">A website where Suleman and his crew can connect with each other — social hub, community tools, crew coordination.</p>
+            <div class="card__tags"><span class="tag">CSS</span><span class="tag">Social</span><span class="tag">Community</span></div>
+            <a href="https://github.com/www-infinity4/Suleman" target="_blank" rel="noopener noreferrer"
+               class="card__link" aria-label="View Suleman on GitHub">View Repo ↗</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ ALL REPOS CTA ═══════════════════ -->
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="cta-section__inner">
+        <h2 class="cta-section__title" id="cta-title">The Infinite Inventory</h2>
+        <p class="cta-section__desc">
+          Every project lives on GitHub. Star, fork, contribute — or build your own signal.
+        </p>
+        <a href="https://github.com/www-infinity4" target="_blank" rel="noopener noreferrer"
+           class="btn btn--primary btn--large" aria-label="View all repositories on GitHub">
+          View All 25 Repositories ↗
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <span class="brand-icon" aria-hidden="true">⬡</span>
+        <span>Warehouse<strong>13</strong></span>
+      </div>
+      <p class="site-footer__copy">
+        © 2026 <a href="https://github.com/www-infinity4" target="_blank" rel="noopener noreferrer">www-infinity4</a>.
+        Built on GitHub Pages. Signal always on.
+      </p>
+      <nav class="site-footer__links" aria-label="Footer navigation">
+        <a href="https://github.com/www-infinity4/Warehouse13" target="_blank" rel="noopener noreferrer">Source</a>
+        <a href="https://github.com/www-infinity4" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
