@@ -7,15 +7,15 @@ Every repo. Every signal. One portal.
 
 | Category | Projects |
 |---|---|
-| **Tools** | Gitpub, Gitpal, Gitpal+, Gitpro, Gitmap, Gitpin, Gitflow, Gitcoin, Gitdad, Git-Stream, Git Core, Clone-of-Gitpal |
-| **Games** | Escape From New York, Escape From LA, Pirates of Silicon Valley, Emulation Station |
-| **Media** | Alien Radio, Shortwave, Camera App |
-| **Research** | Thermite Earth Core, Fission, Unthinkable, Giro |
-| **Social** | Suleman |
+| **Tools** | Gitpub, Gitpal, Gitpal+, Gitpro, Gitmap, Gitpin, Gitflow, Gitcoin, Gitdad, Git-Stream, Git Core, Clone-of-Gitpal, Osprey, Octave, C-, Actuator, AI-Agent-Knowledge-Base-, Infinity-Flow |
+| **Games** | Escape From New York, Escape From LA, Pirates of Silicon Valley, Emulation Station, Atari, Atari-Clone |
+| **Media** | Alien Radio, Shortwave, Camera App, AI Editing Software, Astra Ring Sound Machine |
+| **Research** | Thermite Earth Core, Fission, Unthinkable, Giro, Electromagnetism, Radiation, Digital Signal Weed Control, INFINITY, GPT Vector Design, Pole Flipping Gas Shells, Natural Soil Radon EMF, Rooting Hormone, Situations, Some Spook, Revenge Of The Pith, Twitter Users Turned Into Food Vegetables |
+| **Social** | Suleman, -Lynx |
 
 ## Live Site
 
-Deployed via **GitHub Pages** — see the [Actions tab](../../actions) for deployment status.
+Deployed via **GitHub Pages** — [https://www-infinity4.github.io/Warehouse13/](https://www-infinity4.github.io/Warehouse13/)
 
 ## Structure
 
