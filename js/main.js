@@ -79,15 +79,15 @@
   const navLinks  = document.querySelectorAll('.nav-link[href^="#"]');
 
   if (sections.length > 0 && navLinks.length > 0 && 'IntersectionObserver' in window) {
-    var currentSection = '';
+    let currentSection = '';
 
-    var observer = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             currentSection = entry.target.id;
             navLinks.forEach(function (link) {
-              var href = link.getAttribute('href');
+              const href = link.getAttribute('href');
               if (href === '#' + currentSection) {
                 link.classList.add('nav-link--active');
               } else {
@@ -106,28 +106,27 @@
   }
 
   // ─── Animate stat numbers on scroll ───
-  var statsAnimated = false;
-  var statNums = document.querySelectorAll('.stat__num');
+  let statsAnimated = false;
+  const statNums = document.querySelectorAll('.stat__num');
 
   function animateStats() {
     if (statsAnimated) { return; }
     statsAnimated = true;
 
     statNums.forEach(function (el) {
-      var target = el.textContent.trim();
-      var numVal = parseInt(target, 10);
+      const target = el.textContent.trim();
+      const numVal = parseInt(target, 10);
 
       // Only animate pure numbers (not "∞")
       if (!isNaN(numVal) && numVal > 0) {
-        var start = 0;
-        var duration = 1200;
-        var startTime = null;
+        const duration = 1200;
+        let startTime = null;
 
         function step(timestamp) {
           if (!startTime) { startTime = timestamp; }
-          var progress = Math.min((timestamp - startTime) / duration, 1);
+          const progress = Math.min((timestamp - startTime) / duration, 1);
           // Ease-out cubic
-          var eased = 1 - Math.pow(1 - progress, 3);
+          const eased = 1 - Math.pow(1 - progress, 3);
           el.textContent = Math.round(eased * numVal).toString();
 
           if (progress < 1) {
@@ -141,9 +140,9 @@
   }
 
   if ('IntersectionObserver' in window) {
-    var heroStats = document.querySelector('.hero__stats');
+    const heroStats = document.querySelector('.hero__stats');
     if (heroStats) {
-      var statsObserver = new IntersectionObserver(
+      const statsObserver = new IntersectionObserver(
         function (entries) {
           if (entries[0].isIntersecting) {
             animateStats();
