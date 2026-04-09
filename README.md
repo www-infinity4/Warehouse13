@@ -12,6 +12,7 @@ Every repo. Every signal. One portal.
 | **Media** | Alien Radio, Shortwave, Camera App |
 | **Research** | Thermite Earth Core, Fission, Unthinkable, Giro |
 | **Social** | Suleman |
+| **News** | Science News (live ScienceDaily feed) |
 
 ## Live Site
 

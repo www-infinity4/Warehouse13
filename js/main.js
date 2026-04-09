@@ -159,3 +159,86 @@
   }
 
 })();
+
+// ─── Science News Feed ───
+// Fetches the latest ScienceDaily headlines via rss2json and renders them.
+(function () {
+  'use strict';
+
+  var feedEl    = document.getElementById('science-news-feed');
+  var loadingEl = document.getElementById('news-loading');
+
+  if (!feedEl) { return; }
+
+  var MAX_ITEMS = 6;
+
+  var RSS_URL = 'https://www.sciencedaily.com/rss/all.xml';
+  var API_URL = 'https://api.rss2json.com/v1/api.json?rss_url=' +
+                encodeURIComponent(RSS_URL) + '&count=' + MAX_ITEMS;
+
+  function escapeHtml(str) {
+    var map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;', '`': '&#096;' };
+    return (str || '').replace(/[&<>"'`]/g, function (ch) { return map[ch]; });
+  }
+
+  function formatDate(dateStr) {
+    try {
+      var d = new Date(dateStr);
+      return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function renderItems(items) {
+    if (loadingEl && loadingEl.parentNode) { loadingEl.parentNode.removeChild(loadingEl); }
+
+    items.forEach(function (item) {
+      var article = document.createElement('article');
+      article.className = 'news-item';
+      article.setAttribute('aria-label', item.title);
+      article.innerHTML =
+        '<span class="news-item__source">ScienceDaily</span>' +
+        '<p class="news-item__title">' + escapeHtml(item.title) + '</p>' +
+        '<p class="news-item__meta">' + escapeHtml(formatDate(item.pubDate)) + '</p>' +
+        '<a href="' + escapeHtml(item.link) + '" target="_blank" rel="noopener noreferrer"' +
+        '   class="news-item__link" aria-label="Read article: ' + escapeHtml(item.title) + '">' +
+        '  Read Article ↗' +
+        '</a>';
+      feedEl.appendChild(article);
+    });
+
+    var attr = document.createElement('p');
+    attr.className = 'news-feed__attribution';
+    attr.innerHTML = 'Source: <a href="https://www.sciencedaily.com/" target="_blank" rel="noopener noreferrer">ScienceDaily</a>';
+    feedEl.appendChild(attr);
+  }
+
+  function renderError() {
+    if (loadingEl && loadingEl.parentNode) { loadingEl.parentNode.removeChild(loadingEl); }
+    var div = document.createElement('div');
+    div.className = 'news-feed__error';
+    div.setAttribute('role', 'alert');
+    div.innerHTML = 'Signal unavailable — ' +
+      '<a href="https://www.sciencedaily.com/" target="_blank" rel="noopener noreferrer">' +
+      'visit ScienceDaily directly</a>';
+    feedEl.appendChild(div);
+  }
+
+  fetch(API_URL)
+    .then(function (res) {
+      if (!res.ok) { throw new Error('HTTP ' + res.status); }
+      return res.json();
+    })
+    .then(function (data) {
+      if (data.status === 'ok' && Array.isArray(data.items) && data.items.length > 0) {
+        renderItems(data.items.slice(0, MAX_ITEMS));
+      } else {
+        renderError();
+      }
+    })
+    .catch(function () {
+      renderError();
+    });
+
+}());

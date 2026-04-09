@@ -26,6 +26,7 @@
         <li><a href="#media"   class="nav-link">Media</a></li>
         <li><a href="#research" class="nav-link">Research</a></li>
         <li><a href="#social"  class="nav-link">Social</a></li>
+        <li><a href="#news"    class="nav-link">News</a></li>
         <li>
           <a href="https://github.com/www-infinity4" target="_blank" rel="noopener noreferrer"
              class="nav-link nav-link--cta" aria-label="Open GitHub profile in new tab">
@@ -82,6 +83,10 @@
 
         <li class="mobile-menu__section-label">— Social —</li>
         <li><a href="https://github.com/www-infinity4/Suleman"  target="_blank" rel="noopener noreferrer" class="mobile-link">Suleman</a></li>
+
+        <li class="mobile-menu__section-label">— News —</li>
+        <li><a href="#news" class="mobile-link">Science News Feed</a></li>
+        <li><a href="https://www.sciencedaily.com/" target="_blank" rel="noopener noreferrer" class="mobile-link">ScienceDaily ↗</a></li>
 
         <li class="mobile-menu__divider"></li>
         <li>
@@ -425,6 +430,31 @@
                class="card__link" aria-label="View Suleman on GitHub">View Repo ↗</a>
           </article>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ SCIENCE NEWS ═══════════════════ -->
+    <section id="news" class="section" aria-labelledby="news-title">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__tag">Live Feed</span>
+          <h2 class="section__title" id="news-title">Science News</h2>
+          <p class="section__desc">
+            Latest discoveries from ScienceDaily — live research headlines across every domain.
+          </p>
+        </div>
+        <div class="news-feed" id="science-news-feed" aria-live="polite" aria-label="Science news feed">
+          <div class="news-feed__loading" id="news-loading">
+            <span class="news-feed__spinner" aria-hidden="true"></span>
+            <span>Fetching signal…</span>
+          </div>
+        </div>
+        <div class="news-feed__footer">
+          <a href="https://www.sciencedaily.com/" target="_blank" rel="noopener noreferrer"
+             class="btn btn--outline" aria-label="Visit ScienceDaily for more science news">
+            More on ScienceDaily ↗
+          </a>
         </div>
       </div>
     </section>
